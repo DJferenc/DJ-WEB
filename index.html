@@ -1,58 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Site</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .hidden { display: none; }
-        .login-form { margin-bottom: 20px; }
-        .video-container { margin-top: 20px; }
-    </style>
+    <title>Bejelentkezős Weboldal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div id="login-section" class="login-form">
-            <h1>Login</h1>
-            <input type="text" id="username" placeholder="Username" /><br />
-            <input type="password" id="password" placeholder="Password" /><br />
-            <button onclick="login()">Login</button>
-            <p id="error-message" class="hidden">Invalid credentials</p>
-        </div>
-        <div id="video-section" class="hidden video-container">
-            <h1>Welcome!</h1>
-            <p>Here are your videos:</p>
-            <!-- Embed videos here -->
-            <video controls>
-                <source src="video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+        <h1>Bejelentkezés</h1>
+        <form id="login-form">
+            <label for="username">Felhasználónév:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Jelszó:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Bejelentkezés</button>
+        </form>
+        <div id="message"></div>
     </div>
-    <script>
-        const validUsername = 'user'; // Replace with your username
-        const validPassword = 'pass'; // Replace with your password
-
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('error-message');
-            const loginSection = document.getElementById('login-section');
-            const videoSection = document.getElementById('video-section');
-
-            if (username === validUsername && password === validPassword) {
-                loginSection.classList.add('hidden');
-                videoSection.classList.remove('hidden');
-            } else {
-                errorMessage.classList.remove('hidden');
-            }
-        }
-    </script>
+    <script scr="script3.js"></script>
+    <script scr="script2.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
