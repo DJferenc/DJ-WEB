@@ -6,7 +6,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 
     // Az itt megadott felhasználónév és jelszó csak példaként szerepel
         const validUsername = 'DJGabi';
-    const validPassword = 'Gabimester';
+    const validPassword = 'Gabesz';
 
     const messageDiv = document.getElementById('message');
 
