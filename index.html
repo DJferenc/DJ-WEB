@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Bejelentkezés</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Login</h1>
-        <input type="text" id="username" placeholder="Username" /><br />
-        <input type="password" id="password" placeholder="Password" /><br />
-        <button onclick="login()">Login</button>
-        <p id="error-message" class="hidden">Invalid credentials</p>
+        <h1>Bejelentkezés</h1>
+        <form id="login-form">
+            <label for="username">Felhasználónév:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Jelszó:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Bejelentkezés</button>
+        </form>
+        <div id="message"></div>
     </div>
-    <script>
-        const validUsername = 'user'; // Replace with your username
-        const validPassword = 'pass'; // Replace with your password
-
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('error-message');
-
-            if (username === validUsername && password === validPassword) {
-                sessionStorage.setItem('username', username); // Store the username
-                window.location.href = 'welcome.html'; // Redirect to welcome page
-            } else {
-                errorMessage.classList.remove('hidden');
-            }
-        }
-    </script>
+    <script src="script3.js"></script>
+    <script src="script2.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
