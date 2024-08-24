@@ -1,26 +1,55 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bejelentkezős Weboldal</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Bejelentkezés</h1>
-        <form id="login-form">
-            <label for="username">Felhasználónév:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Jelszó:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Bejelentkezés</button>
-        </form>
-        <div id="message"></div>
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username" /><br />
+        <input type="password" id="password" placeholder="Password" /><br />
+        <button onclick="login()">Login</button>
+        <p id="error-message" class="hidden">Invalid credentials</p>
     </div>
-    <script scr="script3.js"></script>
+
+    <!-- 1. Felhasználói bejelentkezés -->
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (validateCredentials(username, password)) {
+                sessionStorage.setItem('username', username); // 3. Felhasználónév tárolása
+                window.location.href = 'welcome.html';
+            } else {
+                showErrorMessage();
+            }
+        }
+    </script>
+
+    <!-- 2. Hibaüzenet kezelése -->
+    <script>
+        function showErrorMessage() {
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.classList.remove('hidden');
+        }
+    </script>
+
+    <!-- 3. Felhasználónév tárolása -->
+    <script>
+        function validateCredentials(username, password) {
+            const validUsername = 'user'; // Ezt cseréld ki a megfelelő felhasználónévre
+            const validPassword = 'pass'; // Ezt cseréld ki a megfelelő jelszóra
+
+            return username === validUsername && password === validPassword;
+        }
+   <script scr="script3.js"></script>
     <script scr="script2.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
 
