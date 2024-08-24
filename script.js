@@ -14,7 +14,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         messageDiv.textContent = 'Sikeresen bejelentkezett!';
         messageDiv.style.color = 'green';
         // Átirányítás a sikeres bejelentkezés utáni oldalra
-        window.location.href = 'https://djferenc.github.io/welcome.html';
+        window.location.href = 'https://djferenc.github.io/DJ-WEB/welcome.html';
     } else {
         messageDiv.textContent = 'Hibás felhasználónév vagy jelszó.';
         messageDiv.style.color = 'red';
