@@ -1,15 +1,52 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Üdvözlő Oldal</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Welcome to Life Hacks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .box:hover {
+            background-color: #eee;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <h1>Life Hacks</h1>
     <div class="container">
-        <h1>Üdvözlünk!</h1>
-        <p>Bejelentkezve vagy.</p>
+        <div class="box">
+            <a href="lifehack1.html">Life Hack 1</a>
+        </div>
+        <div class="box">
+            <a href="lifehack2.html">Life Hack 2</a>
+        </div>
+        <div class="box">
+            <a href="lifehack3.html">Life Hack 3</a>
+        </div>
+        <!-- Add more life hack links as needed -->
     </div>
 </body>
 </html>
