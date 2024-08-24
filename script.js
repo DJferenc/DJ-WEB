@@ -14,7 +14,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         messageDiv.textContent = 'Sikeresen bejelentkezett!';
         messageDiv.style.color = 'green';
         // Átirányítás a sikeres bejelentkezés utáni oldalra
-        window.location.href = 'https://yourdomain.com/welcome.html';
+        window.location.href = 'https://djweb.hu/welcome.html';
     } else {
         messageDiv.textContent = 'Hibás felhasználónév vagy jelszó.';
         messageDiv.style.color = 'red';
